@@ -1,0 +1,466 @@
+/* Calc4Chem - Scientific calculator for chemists  written by Eni Generalic - http://www.periodni.com/                             */
+/* Copyright © 2008 by EniG. If you use a variant of this in your page, then please email me (eni.generalic@gmail.com)  */
+
+/* --------------------------------------------------------- */
+/*                            Calc4Chem                               */
+/* --------------------------------------------------------- */
+
+#calc4chem {
+	position: relative;
+	top: 15px;
+	width: 529px;
+	height: 377px;
+ 	margin: auto;
+	border: 3px outset;
+	background: #e4e4e4;
+	text-align: center;
+	color: #eee;
+}
+
+#kalkulator {
+ position: absolute;
+ top: 3px;
+ left: 3px;
+ width: 257px;
+ height: 365px;
+ border: 0px ridge #f00;
+ background: #e4e4e4;
+ color: #fff;
+}
+
+#biljeska {
+ position: absolute;
+ top: 3px;
+ left: 267px;
+ width: 256px;
+ height: 365px;
+ border: 0px ridge #999;
+ background: #e4e4e4;
+ color: #fff;
+}
+
+#konstante  {
+ position: absolute;
+ top: 13px;
+ left: 275px;
+ width: 245px;
+ height: 350px;
+ border: 1px ridge #999;
+ background: #fff;
+ color: #fff;
+ display: none;
+ /*visibility: hidden;    visible hidden */
+ text-align: center;
+ overflow: auto;
+}
+
+#numformat {
+ position: absolute;
+ top: 138px;
+ left: 3px;
+ width: 245px;
+ height: 225px;
+ border: 1px ridge #999;
+ display: none;
+ background: #e4e4e4; 
+ color: #fff;
+}
+
+.constnaslov {
+	width: 200px;
+	color: #00f;
+	text-align: center;
+	font: normal 12px/125% sans-serif;
+	margin: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px #cacaba solid; 
+}
+.const {
+	width: 200px;
+	text-align: center;
+	font: 11px/125% sans-serif;
+	margin: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px #cacaba solid; 
+}
+.const a:link {
+	display: block;
+	color: #900;
+	text-decoration: none;
+}
+.const a:visited {
+	display: block;
+	color: #036;
+	text-decoration: none;
+}
+.const a:active {
+	display: block;
+	color: #900;
+	text-decoration: none;
+}
+.const a:hover {
+	display: block;
+	background: #eaeafa;
+	color: #900;
+	text-decoration: none;
+}
+
+
+.crta {
+ position: absolute;
+ top: 0px;
+ left: 262px;
+ width: 2px;
+ height: 372px;
+ border: 2px inset;
+ background: #fff;  /* groove ridge */
+ color: #fff;
+}
+
+.tipkovnica {
+ position: absolute;
+ top: 138px;
+ left: 5px;
+ width: 245px;
+ height: 228px;
+ background: #e4e4e4;
+}
+
+.displej {
+ position: absolute;
+ top: 10px;
+ left: 6px;
+ width: 240px;
+ height: 82px;
+ border: 2px ridge #eee;
+ background: #eee;
+}
+
+#numauto, #numsci, #numfix, #nummem, #numrad, #numdeg, #numgrad {
+ position: absolute;
+ margin-top: 2px;
+ width: 26px;
+ height: 10px;
+ font: normal 9px sans-serif;
+ color: #ccc;
+ display: inline;
+ border: 0px solid #e00;
+ background: #eee;
+}
+
+#numauto {
+left: 5px;
+color: #000;
+}
+#numsci {
+left: 37px;
+}
+#numfix {
+left: 62px;
+}
+#nummem {
+left: 107px;
+}
+#numrad {
+left: 154px;
+color: #000;
+}
+#numdeg {
+left: 180px;
+}
+#numgrad {
+left: 205px;
+}
+
+.upit {
+ position: absolute;
+ top: 27px;
+ left: 6px;
+ width: 225px;
+ height: 25px;
+ border: 0px;
+ background: #eee;
+ text-align: left;
+ font: normal 9pt sans-serif;
+ letter-spacing: 1px;
+ color: #0a0;
+}
+
+.rezultat {
+ position: absolute;
+ top: 52px;
+ left: 6px;
+ width: 225px;
+ height: 25px;
+ border: 0px;
+ background: #eee;
+ text-align: right;
+ font: bold 12pt sans-serif;
+ letter-spacing: 1px;
+ color: #00a;
+}
+
+.formatbr {
+ position: absolute;
+ top: 35px;
+ left: 12px;
+ width: 220px;
+ height: 95px;
+ border: 1px solid #cdcdcd;
+ background: #e8e8e8;
+}
+.formatnaslov {
+ position: relative;
+ margin-top: 5px;
+ font: normal 12pt cursive;
+ text-align: center;
+}
+
+.automatik, .scienc, .fiksed   {
+ position: absolute;
+ left: 6px;
+ font: normal 10pt sans-serif;
+}
+.automatik {top: 10px;}
+.scienc {top: 38px;}
+.fiksed {top: 66px;}
+
+.decnaslov {
+ position: absolute;
+ top: 10px;
+ left: 110px;
+ width: 110px;
+ text-align: center;
+ font: normal 10pt sans-serif;
+ color: #000;
+ border: 0px solid #cdcdcd;
+}
+.decimal {
+ position: absolute;
+ top: 32px;
+ left: 136px;
+ width: 60px;
+ height: 22px;
+}
+.separator {
+ position: absolute;
+ top: 70px;
+ left: 65px;
+ width: 150px;
+ text-align: right;
+ font: normal 10pt sans-serif;
+ color: #000;
+ border: 0px solid #cdcdcd;
+ }
+ 
+.rad {
+ position: absolute;
+ top: 140px;
+ left: 12px;
+ width: 220px;
+ height: 21px;
+ border: 1px solid #cdcdcd;
+ background: #e8e8e8;
+}
+
+.deg {
+ position: relative;
+ margin: 4px;
+ top: -1px;
+ font: normal 10pt sans-serif;
+}
+
+.cls {
+ position: absolute;
+ top: 103px;
+ left: 217px;
+ width: 30px;
+ height: 22px;
+ color: #f00;
+ display: none;
+}
+
+.zadatak {
+ position: absolute;
+ top: 98px;
+ left: 6px;
+ width: 240px;
+ height: 28px;
+ border: 2px groove #eee;
+ background: #fff;
+}
+
+.unos {
+ position: absolute;
+ top: 1px;
+ left: 4px;
+ width: 228px;
+ height: 23px;
+ border: 0px;
+ font: bold 10pt cursive;
+ color: #060;
+}
+
+
+.tekstarea {
+ position: absolute;
+ top: 10px;
+ left: 8px;
+ width: 238px;
+ height: 317px;
+ padding: 0px 0px 0px 5px;
+ border: 2px groove #ccc;
+ background: #fff;  /*plavo*/
+ font: normal 9pt/150% monospace;
+ color: #345678;
+ overflow: auto;
+}
+
+.n1, .n2, .n3, .n4  {
+ position: absolute;
+ top: 340px;
+ height: 24px;
+ width: 80px;
+ font: normal 9pt sans-serif;
+ color: #000;
+ }
+
+.n1   {
+ left: 8px; 
+}
+.n2   {
+ left: 91px; 
+}
+.n3   {
+ left: 174px; 
+}
+.n4   {
+ top: 174px;
+ left: 85px; 
+}
+.n2copy   {
+ position: absolute;
+ left: 0px;
+ top: 206px;
+ width: 242px;
+ color: #aaa;
+ font: normal 9pt sans-serif;
+ text-align: center;
+}
+
+.b11, .b12, .b13, .b14, .b15, .b16, .b21, .b22, .b23, .b24, .b25, .b26, .b31, .b32, .b33, .b34, .b35, .b36 {
+ position: absolute;
+ height: 25px;
+ width: 40px;
+ padding: 0px;
+ color: #000;
+ font: normal 10pt monospace;
+ }
+
+.b41, .b42, .b43, .b44, .b45, .b46, .b51, .b52, .b53, .b54, .b55, .b56, .b61, .b62, .b63, .b64, .b65, .b66, .b71, .b72, .b73, .b74, .b75, .b76 {
+ position: absolute;
+ height: 35px;
+ width: 40px;
+ padding: 0px;
+ color: #000;
+}
+
+.b55, .b75   {
+ position: absolute;
+ height: 35px;
+ width: 81px;
+ font: normal 10pt sans-serif;
+ color: #000;
+ }
+ 
+.b75   {
+ position: absolute;
+ height: 35px;
+ width: 81px;
+ font: normal 15pt sans-serif;
+ color: #050;
+ }
+ 
+.b45, .b46 {
+ font: normal 10pt sans-serif;
+ color: #a00;
+ }
+ 
+ .b34 {
+ font: normal 10pt sans-serif;
+ }
+ 
+.b44, .b54, .b74 {
+ font: bold 13pt sans-serif;
+ color: #00f;
+ }
+.b64 {
+ font: normal 15pt serif;
+ color: #00f;
+ }
+ 
+.b41, .b42, .b43, .b51, .b52, .b53, .b61, .b62, .b63, .b71, .b72 {
+ font: normal 12pt cursive;
+ color: #575;
+ }
+ 
+.b11, .b12, .b13, .b14, .b15, .b16 {
+top: 0px;
+}
+
+.b21, .b22, .b23, .b24, .b25, .b26 {
+top: 26px;
+}
+
+.b31, .b32, .b33, .b34, .b35, .b36 {
+top: 52px;
+}
+
+.b41, .b42, .b43, .b44, .b45, .b46  {
+top: 85px;
+}
+
+.b51, .b52, .b53, .b54, .b55, .b56  {
+top: 121px;
+}
+
+.b61, .b62, .b63, .b64, .b65, .b66  {
+top: 156px;
+}
+
+.b71, .b72, .b73, .b74, .b75, .b76  {
+top: 192px;
+}
+
+
+.b11, .b21, .b31, .b41, .b51, .b61, .b71 {
+left: 0px
+}
+
+.b12, .b22, .b32, .b42, .b52, .b62, .b72 {
+left: 41px
+}
+
+.b13, .b23, .b33, .b43, .b53, .b63, .b73 {
+left: 82px
+}
+
+.b14, .b24, .b34, .b44, .b54, .b64, .b74 {
+left: 123px
+}
+
+.b15, .b25, .b35, .b45, .b55, .b65, .b75 {
+left: 164px
+}
+
+.b16, .b26, .b36, .b46, .b56, .b66, .b76 {
+left: 205px
+}
+
+/*                     END of  Calc4Chem                       */
+/* --------------------------------------------------------- */
+
+
+
+/*Eni Generalic, Split, Create: 1999/10/14; Update: 2008/02/27   */
+/* Copyright © 2008 by EniG.   */

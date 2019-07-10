@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="An overview of BrowzOS' features.">
+<style type="text/css">
+ body {
+  background-color: #FFFFFF;
+  color: #000000;
+ }
+ p.c3 {text-align: center}
+ div.c2 {text-align: center}
+ span.c1 {font-size: 200%; font-weight: bold}
+ p.c0 {font-size: 150%; font-weight: bold; text-align: center}
+</style>
+</head>
+<body>
+<div class="c2"><span class="c1">BrowzOS</span>
+<p class="c0">The Web Browser's Operating System</p>
+</div>
+<p></p>
+<hr>
+<div class="c2"><p class="c0">Technical Information (For Web Designers And Applet Programmers)</p></div>
+<p>As mentioned previously, these are the basic requirements for web designers who wish to run BrowzOS 
+from a server:</p>
+<ul><li>Any client computer with internet access and any client-side operating 
+system (i.e.: GNU/Linux, Windows, Mac OS X, etc.)</li>
+<li>Any file archiving program or file compression program with ZIP 
+file read/write access</li>
+<li>Any SSH and/or FTP client program to access a server across the 
+internet</li>
+<li>Any text editor, rich text editor or &quot;what-you-see-is-what 
+you-get&quot; editor (such as Frontpage, SciTe, Notepad, Vi, Microsoft Word, etc.)</li>
+<li>Any server computer running server software (like Apache, IIS or 
+similar)&nbsp; and any mainstream server operating system (i.e.: FreeBSD, 
+Windows Server 2003, etc.)</li>
+<li>Any mainstream web browser with the ability to run web applets 
+and scripts (i.e.: Internet Explorer 6 and over, Mozilla 1.7 and over, Mozilla 
+Firefox, Safari, Netscape 6 and over, etc.)</li>
+<li>Software drivers (i.e.: ActiveX controls and/or web browser 
+plug-ins) for both client computers and servers which enable mainstream web browsers to properly run certain web 
+applets and scripts (examples are Java, Flash, Shockwave, JavaScript, Visual 
+BASIC script, etc.)</li>
+<li>Software drivers (i.e.: programming language run-time files) 
+which enable both mainstream server and client operating systems to properly run 
+certain web applets and scripts (like ASP, .NET framework, PHP, SQL, etc.)</li>
+</ul>
+<p>Also, there are 3 steps for web designers to get started with 
+BrowzOS:</p>
+<ol><li>Download the package (it is 
+  available in multiple file formats, including ZIP, 7zip, RAR, etc.)</li>
+  <li>Extract the package and make any necessary changes to the 
+  scripts, web pages and applets in the package (this would also include adding 
+  &amp; removing various applets and scripts as needed)</li>
+  <li>Upload the files to any directory on the server in use</li>
+</ol>
+<p>Edit the web pages as needed. This includes adding/removing 
+scripts and applets as needed, editing scripts as needed, changing the file 
+names of the HTML pages as needed and editing the contents of the HTML pages 
+as needed (i.e.: adding/removing links, icons, etc.)
+<p>If an applet or script requires directory/file access on a web server, log into the 
+server (using either an FTP or SSH client) and change the file attributes of the 
+directory to allow full read/write/execute permissions to the Owner, Group and 
+Public user groups. In an FTP client, this is done by right-clicking on the folder, 
+selecting File Attributes and either selecting all the check boxes or changing 
+the numeric value to &quot;0777&quot; or &quot;777.&quot; In an SSH client, log into the UNIX shell 
+and type either of the following commands:</p>
+<ul>
+  <li>chmod a+rwx foldername</li>
+  <li>chmod 0777 foldername</li>
+  <li>chmod 777 foldername</li>
+</ul>
+<p>Where &quot;foldername&quot; is the name of the folder whose  attributes need to be changed. This can 
+also be done to individual files that require full access and modification such as text files and database files; 
+simply substitute &quot;foldername&quot; with the name of the file whose attributes need to be changed.</p>
+<p>If the extracted/edited package is uploaded into a website's 
+folder on a server (i.e.: if the package has been uploaded to
+<a href="ftp://www.yourdomain.com/yourdomain.com/">
+ftp://www.yourdomain.com/yourdomain.com/</a> or 
+<a href="ftp://yoursubdomain.domain.com/yoursubdomain.domain.com/">
+ftp://yoursubdomain.domain.com/yoursubdomain.domain.com/</a>,)  open the 
+web browser, type the web address and the index page is loaded (which can be 
+changed as needed). If the extracted/edited package is uploaded into a folder 
+residing inside an actual domain or sub-domain's main website folder, changes 
+are need to the already-existing index page in order to allow navigation to the BrowzOS 
+index page (again, anyone can change the BrowzOS index page as needed).</p>
+<p>When designing applets that require direct file access on a 
+client computer from a server, the best programming language to use for creating 
+the applet is Java. Typical Java applets do not have file access on a client 
+computer for security reasons. However, Java applets may be signed with a 
+certificate, which will give them the ability to access the client computer's 
+hard drive. Usually, web designers who work for professional organisations and 
+corporations can apply for a certificate from a Certificate Authority (CA,) 
+which can cost $150-$400 per year. For other web designers (especially hobbyists 
+and open-source web designers) who do not have the money to spend for a 
+certificate from a CA, Java applets can be self-signed (at no monetary cost) 
+with a home-made test certificate.</p>
+<p>Even though home-made test certificates are free when compared to CA 
+certificates, the only true difference between them is the 
+fact that, when self-signed, the web browser will not recognise the applet as 
+having been created by a trustworthy source; it will be identified as 
+trustworthy only when signed using a CA certificate. Because of this, a client 
+computer user must grant permission for the applet to run and install the test 
+certificate. In any case, whether or not it is signed using a CA or 
+test certificate, the Java applet will still retain the unrestricted 
+functionality of direct file access on a client computer's hard drive.</p>
+<p>When using Sun's Java SDK, the simplest way to self-sign a Java 
+applet is by completing the following commands in a command prompt:</p>
+<ol><li>keytool -genkey -dname &quot;cn=Creator&quot; -validity 365 -storepass StorePassword -keypass KeyPassword</li>
+<li>keytool -selfcert</li>
+<li>jarsigner java_applet.jar -keystore StorePassword -keypass KeyPassword mykey</li></ol>
+<p>Where &quot;StorePassword&quot; and &quot;KeyPassword&quot; are the desired keystore 
+and key passwords for the certificate, &quot;Creator&quot; is the name of the applet's 
+creator, &quot;365&quot; forces the certificate to be valid for 365 days (use any value if desired) and &quot;mykey&quot; is 
+the default keystore alias (a.k.a.: the default name of the generated 
+certificate).</p>
+<p>Please refer to the following guides for the applet-signing 
+tools available in Sun's Java SDK:</p>
+<ul>
+  <li><a href="keytool.html">keytool</a></li>
+  <li><a href="jarsigner.html">jarsigner</a></li>
+</ul>
+<p></p><hr>
+<p class="c3"><a href="index.html">Return to the table of contents</a></p>
+</body>
+</html>

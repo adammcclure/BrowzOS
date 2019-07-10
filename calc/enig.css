@@ -1,0 +1,619 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font: normal 10pt cursive;
+	color: #123456;
+	background: #000000
+}
+
+h1 {
+	font-size: 2em;
+	margin: 2em 0;
+	text-align: center;
+}
+h2 {
+	margin: 10px;
+	color: #000099;
+	font: 12pt cursive;
+	padding: 5px 0px;
+	text-align: left;
+}
+
+h3 {
+	margin: 10px;
+	font: bold 11pt cursive;
+	padding: 5px 0px;
+	text-align: left;
+}
+h4 {
+	margin: 10px;
+	font: bold italic 10pt cursive;
+	padding: 5px 0px;
+	text-align: left;
+}
+h5 {
+	margin: 10px;
+	font: italic 10pt cursive;
+	text-align: left;
+}
+img {border: 0px;}
+li {padding: 5px;}
+p {
+	margin-bottom: 1em;
+	text-align: justify;
+	color: #123456;
+}
+td {
+text-align: center;
+}
+
+#glavni {
+	position: relative;
+	width: 880px;
+ 	margin: auto;
+	border: 0px;
+}
+#gore {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 160px;
+	margin-right: 0px;
+	border-bottom: 0px #cacaba solid;
+	background: #fff;
+}
+
+#dole {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	width: 100%;
+	border-top: 1px #cacaba solid;
+}
+#livi {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 145px;
+	margin-right: 5px;
+	text-align: center;
+	border: 0px solid #0f0;
+}
+#desni {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin-left: 150px;
+	width: 725px;
+	border: 0px solid #f00;
+}
+#footer {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	clear: both;
+}
+
+.data , .prilog {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	clear: both;
+}
+
+.desno {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-left: 512px;
+	width: 365px;
+	text-align: justify;
+	background: #fff;
+	border: 1px solid #0cc;
+}
+.centar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 145px;
+	margin-left: 366px;
+	text-align: center;
+	border: 0px solid #0ff;
+}
+
+
+/* --------------------------------------------------------- */
+/*                            GOOGLE                                  */
+/* --------------------------------------------------------- */
+.google-vrh {
+	position: absolute;
+	top: 70px;
+	left: 150px;
+	/* border-top: 1px #cacaba solid; */
+}
+
+.google-dno {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	background: #fff;
+	padding-top: 10px;
+	border-top: 1px #cacaba solid;
+	border-bottom: 1px #cacaba solid;
+}
+
+/* --------------------------------------------------------- */
+/*                              SLIKE                                    */
+/* --------------------------------------------------------- */
+.img-l {
+	float: left;
+	margin: 10px 20px 10px 10px;
+}
+.img-r {
+	float: right;
+	margin: 10px 10px 10px 20px;
+}
+.img-c {
+	text-align: center;
+	margin: 20px;
+}
+.img-p {
+	margin-top: 10px;
+	text-align: center;
+	font: italic 11pt Times;
+}
+.txt-c  {
+	text-align: center;
+}
+/* --------------------------------------------------------- */
+/*                          TOPMENI                                  */
+/* --------------------------------------------------------- */
+
+.topmeni {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 725px;
+	height: 55px;
+	margin-top: 5px;
+	margin-left: 150px;
+	font: 11px/150% verdana,sans-serif;
+	text-align: center;
+	color: #226622;
+	border-bottom: 1px #cacaba solid;
+}
+.zastave {
+	top:0px;
+	padding: 5px;
+}
+.zde, .zen, .zfr, .zhr, .zit, .zes {
+	position: absolute;
+	top: 0px;
+	width: 116px;
+	margin: 0px;
+	padding-bottom: 5px;
+}
+.zde {left: 0px;}
+.zen {left: 122px;}
+.zfr {left: 244px;}
+.zhr {left: 366px;}
+.zit {left: 488px;}
+.zes {left: 610px;}
+
+.topmeni a:link {
+	display: block;
+	color: #900;
+}
+.topmeni a:visited {
+	display: block;
+	color: #036;
+}
+.topmeni a:active {
+	display: block;
+	color: #900;
+}
+.topmeni a:hover {
+	display: block;
+	background: #fff;
+	color: #00f;
+}
+
+/* --------------------------------------------------------- */	
+	
+a:link {
+	color: #00f;
+	text-decoration: none;
+ }
+a:visited {
+	color: #00a;
+	text-decoration: none;
+ }
+a:active {
+	color: #000;
+	text-decoration: none;
+ }
+a:hover {
+	color: #f00;
+	text-decoration: none;
+ }
+
+/* --------------------------------------------------------- */
+/*                          PSE   LOGO                               */
+/* --------------------------------------------------------- */
+ 
+.logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 120px;
+	height: 120px;
+	margin: 15px 0px 0px 10px;
+	text-align: center;
+	border: 0px #f00 solid;
+}
+.img-riba {
+	position: absolute;
+	top: 46px;
+	left: -15px;
+}
+.img-logo {
+	position: relative;
+	top: 7px;
+}
+.txt-logo {
+	position: absolute;
+	top: 58px;
+	left: 40px;
+	font: 28pt cursive;
+	letter-spacing: 5px;
+	z-index: 10;
+}
+.pse-logo {
+	position: relative;
+	margin-top: 10px;
+	font: 11px/150% verdana,sans-serif;
+	color: #226622;
+}
+/* --------------------------------------------------------- */
+/*                                   UTF-8                                */
+
+.tablice {
+	position: absolute;
+	top: 119px;
+	left: 2px;
+	width: 750px;
+	height: 510px;
+}
+
+.naslov {
+	position: relative;
+	top: 0px;
+	width: 750px;
+	color:#800;
+	font: bold 22pt cursive;
+	text-align: center;
+}
+.znak {
+	text-align: left;
+}
+.utf h2 {
+	text-align: center;
+}
+
+/* ---------------------------------------- */
+/*             COLOR TABLE                   */
+.ct {
+top: 0px;
+}
+
+.ct table {
+width: 98%;
+border: 1px #000 solid;
+border-collapse: collapse;
+border-spacing: 0px;
+margin-top: 15px;
+}
+.ct td {
+text-align: center;
+width: 20%;
+border: 1px #000 solid;
+}
+/* ---------------------------------------- */
+/*                      EniG.                        */
+/* ---------------------------------------- */
+.enig {
+	font: normal 10pt cursive;
+	color: #123456;
+}
+.enig p {
+	margin: 0;
+	padding: 0px 10px 5px 10px;
+	text-align: justify;
+	color: #123456;
+}
+.BiliOkvir{
+	position: relative;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 5px;
+	background: #fff;
+	border: 1px solid #0cc;
+}
+.SlikaLivo, .SlikaDesno , .SlikaVrh {
+	position: relative;
+	width: 30%;
+	text-align: center;
+}
+.SlikaLivo {
+	float: left; 
+	margin-top: 20px;
+}
+.SlikaDesno {
+	float: right;
+	margin-top: 20px;
+}
+.SlikaVrh {
+	float: left;
+	margin-top: 0px;
+}
+.TekstLivo, .TekstDesno  {
+	position: relative;
+	width: 70%;
+	text-align: left;
+}
+.TekstDesno  {
+	margin-left: 30%;
+}
+
+.onlyen {
+	font: normal 10pt cursive;
+	margin-top: 5px;
+	text-align: center;
+	color: #f00;
+}
+.red, .livo, .desno, .centar, .kratki, .dugi {
+	top: 0px;
+	left: 0px;
+}
+.red {
+	position: relative;
+	width: 100%;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	background: #fff;
+	border: 1px solid #0cc;
+}
+.livo {
+	position: relative;
+	width: 370px;
+	text-align: justify;
+	background: #fff;
+	border: 1px solid #0c0;
+}
+.desno {
+	position: absolute;
+	margin-left: 517px;
+	width: 370px;
+	text-align: justify;
+	background: #fff;
+	border: 1px solid #0cc;
+}
+.centar {
+	position: absolute;
+	width: 145px;
+	margin-left: 371px;
+	text-align: center;
+}
+
+.dugi  {
+	position: absolute;
+	margin-left: 20px;
+	margin-right: 5px;
+	width: 530px;
+	text-align: left;
+	padding-bottom: 5px;
+}
+.kratki {
+
+	position: relative;
+	width: 325px;
+	margin-left: 550px;
+	margin-top: 0px;
+	margin-right: 0px;
+	text-align: center;
+		
+}
+.dugi2  {
+
+	position: relative;
+	margin-left: 325px;
+	margin-right: 5px;
+	width: 550px;
+	text-align: left;
+	padding-bottom: 5px;
+}
+.kratki2 {
+	position: absolute;
+	width: 325px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	text-align: center;
+		
+}
+
+.jezik {
+	font: normal 9pt cursive;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.enig a:link {
+	color: #00f;
+	text-decoration: none;
+ }
+.enig a:visited {
+	color: #00a;
+	text-decoration: none;
+ }
+.enig a:active {
+	color: #000;
+	text-decoration: none;
+ }
+.enig a:hover {
+	color: #f00;
+	text-decoration: none;
+ }
+
+/* --------------------------------------------------------- */
+.space4 {
+	font: 4pt verdana,sans-serif;
+ }
+.space6 {
+	font: 6pt verdana,sans-serif;
+ }
+.space8 {
+	font: 8pt verdana,sans-serif;
+ }
+
+.paypal {
+	margin-bottom: 10px;
+	color: #000;
+	font: normal 10pt cursive;
+	text-align: center;
+}
+ 
+.linkdno {
+	margin-bottom: 10px;
+	color: #000;
+	font: normal 12pt cursive;
+	text-align: center;
+}
+.copyme {
+ position: relative;
+ text-align: center;
+ color: #aaa;
+ font: 8pt verdana,sans-serif;
+ }
+.copyme a:link {color: #a8a9b9}
+.copyme a:hover {color: #f00}
+
+.tekst {
+	color: #000;
+	font: 10pt verdana,sans-serif;
+	text-align: justify;
+}
+.copycent {
+	margin-top: 5px;
+	font: 10pt verdana,sans-serif;
+	text-align: center;
+}
+.crven {
+	color: #f00;
+}
+.plav {
+	color: #00f;
+}
+.citat {
+	padding: 0px 10px 5px 10px;
+	font: 11px/150% verdana,sans-serif;
+	color: #226622;
+	text-align: justify;
+}
+.eni-print {
+	position: absolute;
+	left: -6000px;
+}
+
+
+.tablica  table, .tablica-b table{
+	border: 1px #000 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+.tablica  caption, .tablica-b  caption {
+	font-size: 1em;
+	font-style: italic;
+	padding: 3px 0px;
+	text-align: center;
+}
+.tablica td {
+	text-align: left;
+	vertical-align: top;
+	padding: 3px;
+}
+.tablica-b td {
+	text-align: center;
+	vertical-align: top;
+	padding: 3px;
+}
+.sredina {
+	text-align: center;
+	padding: 3px;
+}
+/* ---------------------------------------- */
+/*          Oksidacijski brojevi                 */
+/* ---------------------------------------- */
+.sy, .sy-r, .sy-g, .sy-b {
+	position: relative;
+	padding-left: 1px;
+	font-size: 11pt;
+	font-weight: 500;
+	text-align: center;
+}
+.sy-r {color: #f00;}
+.sy-g {color: #4f8c4f;}
+.sy-b {color: #00f;}
+.oxbr {
+	position: absolute;
+	top: -1em;
+	left: 0px;
+	width: 100%;
+	font-family: serif;
+	font-size: 70%;
+	text-align: center;
+}
+.eq-l, .eq-c, .eq-t {
+	position: relative;
+	font-size: 11pt;
+	font-weight: 500;
+}
+.eq-l {
+	padding: 15px;
+	text-align: left;
+}
+.eq-c {
+	padding: 10px 0px;
+	text-align: center;
+}
+.eq-t {
+	padding: 5px;
+	text-align: left;
+}
+.eq-final {
+	padding: 10px;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	background: #fff;
+	border: 1px solid #0cc;
+}
+.korak {
+	padding-left: 50px;
+}
+/* ---------------------------------------- */
+
+/*
+.vidi {background: #ff0; visibility: visible;}
+.nevidi {visibility: hidden;} */
+/* -------------------------------------------- */

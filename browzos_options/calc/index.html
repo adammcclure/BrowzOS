@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<title>Scientific calculator for chemists @ periodni.com</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link media="all" href="calc4chem.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="calc4chem" style="margin-left:auto; margin-right:auto;">
+
+<form action="." name="racunalo">
+
+<div id="kalkulator">
+
+<div class="displej">
+<input name="numauto" value="AUTO" id="numauto" onfocus="ascifix[0].click()" title="Automatic mode" readonly="readonly" type="text">
+<input name="numsci" value="SCI" id="numsci" onfocus="ascifix[1].click()" title="Scientific notation" readonly="readonly" type="text">
+<input name="numfix" value="FIX" id="numfix" onfocus="ascifix[2].click()" title="Fixed number of decimal places" readonly="readonly" type="text">
+
+<input name="nummem" value="MEM" id="nummem" onfocus="MS.click()" title="Memory" readonly="readonly" type="text">
+
+<input name="numrad" value="RAD" id="numrad" onfocus="stupnjevi[0].click()" title="Angle units in radians" readonly="readonly" type="text">
+<input name="numdeg" value="DEG" id="numdeg" onfocus="stupnjevi[1].click()" title="Angle units in degrees" readonly="readonly" type="text">
+<input name="numgrad" value="GRAD" id="numgrad" onfocus="stupnjevi[2].click()" title="Angle units in grads" readonly="readonly" type="text">
+
+<div class="spacerow">&nbsp;</div>
+<input name="oldtask" onclick="DodajBroj(this.value)" class="oldtask" type="text">
+<input name="oldresult" onclick="DodajBroj(this.value)" class="oldresult" title="" type="text">
+<input name="upit" onclick="DodajBroj(this.value)" class="upit" type="text">
+<input name="rezultat" onclick="DodajBroj(this.value)" class="rezultat" title="0" type="text">
+</div>
+
+<div class="zadatak">
+<input name="zadatak" onkeydown="if (event.keyCode==13) {enter.click()}" type="text">
+</div>
+
+
+<div class="tipkovnica">
+<div class="spacerow">&nbsp;</div>
+<input name="sqrt" value="√¯" title="Square root" onclick="Izracunaj(3)" class="funbtn" type="button">
+<input name="root" value="y√¯x" title="Root" onclick="Izracunaj(22)" class="funbtn" type="button">
+<input name="ln" value="ln" title="Natural logarithm" onclick="Izracunaj(5)" class="funbtn" type="button">
+<input name="log" value="log" title="Common logarithm" onclick="Izracunaj(8)" class="funbtn" type="button">
+<input name="tan" value="tan" title="Tangent" onclick="Izracunaj(14)" class="funbtn" type="button">
+<input name="atan" value="atan" title="Arc tangent" onclick="Izracunaj(10)" class="funbtn" type="button">
+<div class="resetrow"></div>
+<input name="kvadrat" value="x²" title="Square" onclick="Izracunaj(2)" class="funbtn" type="button">
+<input name="potencija" value="x^y" title="Power" onclick="Izracunaj(21)" class="funbtn" type="button">
+<input name="aln" value="e^x" title="Natural antilogarithm" onclick="Izracunaj(6)" class="funbtn" type="button">
+<input name="alog" value="10^x" title="Common antilogarithm" onclick="Izracunaj(9)" class="funbtn" type="button">
+<input name="cos" value="cos" title="Cosine" onclick="Izracunaj(15)" class="funbtn" type="button">
+<input name="acos" value="acos" title="Arc cosine" onclick="Izracunaj(11)" class="funbtn" type="button">
+<div class="resetrow"></div>
+<input name="sign" value="+/-" title="Sign change" onclick="Izracunaj(4)" class="funbtn" type="button">
+<input name="1/x" value="1/x" title="Reciprocal" onclick="Izracunaj(7)" class="funbtn" type="button">
+<input name="fact" value="x!" title="Factorial" onclick="Izracunaj(20)" class="funbtn" type="button">
+<input name="postotak" value="%" title="Percent" onclick="Izracunaj(17)" class="funbtn" type="button">
+<input name="sin" value="sin" title="Sine" onclick="Izracunaj(16)" class="funbtn" type="button">
+<input name="asin" value="asin" title="Arc sine" onclick="Izracunaj(12)" class="funbtn" type="button">
+<div class="spacerow">&nbsp;</div>
+<input name="7" value="7" onclick="DodajBroj('7')" class="numbtn" type="button">
+<input name="8" value="8" onclick="DodajBroj('8')" class="numbtn" type="button">
+<input name="9" value="9" onclick="DodajBroj('9')" class="numbtn" type="button">
+<input name="djeljeno" value="/" title="Division" onclick="DodajBroj('/')" class="plusbtn" type="button">
+<input name="MS" value="MS" title="Memory store" onclick="Memory(1)" class="membtn" type="button">
+<input name="MR" value="MR" title="Memory recall" onclick="Memory(2)" class="membtn" type="button">
+<div class="resetrow"></div>
+<input name="4" value="4" onclick="DodajBroj('4')" class="numbtn" type="button">
+<input name="5" value="5" onclick="DodajBroj('5')" class="numbtn" type="button">
+<input name="6" value="6" onclick="DodajBroj('6')" class="numbtn" type="button">
+<input name="puta" value="×" title="Multiplication" onclick="DodajBroj('*')" class="plusbtn" type="button">
+<input name="mode" value="Format" title="Number formats" onclick="Memory(4)" class="modebtn" type="button">
+<div class="resetrow"></div>
+<input name="1" value="1" onclick="DodajBroj('1')" class="numbtn" type="button">
+<input name="2" value="2" onclick="DodajBroj('2')" class="numbtn" type="button">
+<input name="3" value="3" onclick="DodajBroj('3')" class="numbtn" type="button">
+<input name="minus" value="-" title="Subtraction" onclick="DodajBroj('-')" class="plusbtn" type="button">
+<input name="lijevo" value="(" title="Left parenthesis" onclick="DodajBroj('(')" class="expbtn" type="button">
+<input name="desno" value=")" title="Right parenthesis" onclick="DodajBroj(')')" class="expbtn" type="button">
+<div class="resetrow"></div>
+<input name="0" value="0" onclick="DodajBroj('0')" class="numbtn" type="button">
+<input name="." value="." title="Decimal point" onclick="DodajBroj('.')" class="plusbtn" type="button">
+<input name="exp" value="exp" title="Exponent" onclick="DodajBroj('e')" class="expbtn" type="button">
+<input name="plus" value="+" title="Addition" onclick="DodajBroj('+')" class="plusbtn" type="button">
+<input name="enter" value="ENTER" title="Calculate" onclick="Izracunaj('1')" class="enterbtn" type="button">
+<div class="resetrow"></div>
+</div>   <!-- END  tipkovnica -->
+
+<div id="numformat">
+<p class="formatnaslov">Number formats</p>
+<div class="formatbr">
+
+
+<label id="automatik"><input name="ascifix" checked="checked" title="Automatic" onclick="AutoSciFix(0)" type="radio">
+Automatic</label>
+<label id="scienc"><input name="ascifix" title="Science" onclick="AutoSciFix(1)" type="radio">
+Science</label>
+<label id="fiksed"><input name="ascifix" title="Fixed" onclick="AutoSciFix(2)" type="radio">
+Fixed</label>
+
+
+<div class="decnaslov">Decimals</div>
+<select name="izaZareza" size="1" onchange="BrojDecimala(this.selectedIndex)" class="decimal">
+<option value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2" selected="selected"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+<option value="11"> 11 </option>
+<option value="12"> 12 </option>
+<option value="13"> 13 </option>
+<option value="13"> 14 </option>
+<option value="13"> 15 </option>
+</select>
+
+<label id="separator">1000 separator<input id="tisucice" onclick="GroupDigits(0)" type="checkbox"></label>
+
+</div>   <!-- END  formatbr -->
+
+<div class="degrad">
+<label id="rad"><input name="stupnjevi" checked="checked" title="Radians" onclick="RadDegGrad(0)" type="radio">
+Rad</label>
+<label id="deg"><input name="stupnjevi" title="Degrees" onclick="RadDegGrad(1)" type="radio">
+Deg</label>
+<label id="grad"><input name="stupnjevi" title="Grads" onclick="RadDegGrad(2)" type="radio">
+Grad</label>
+</div>   <!-- END  degrad -->
+
+<input name="cls" value="Reset" title="Reset" onclick="Memory(5)" class="cls" type="button">
+<input name="close" value="Close" title="Close Form" onclick="Memory(4)" class="nfclose" type="button">
+<div class="n2copy">www.periodni.com &nbsp; 2013</div>
+</div>   <!-- END  numformat -->
+
+</div>   <!-- END  racunalo -->
+
+<div id="biljeska">
+
+<textarea name="notes" rows="25" cols="36">
+
+</textarea>
+
+<input name="con" value="Constants" title="Physical Constants" onclick="vidi('konstante'); return false;" class="n1" type="button">
+<input name="select" value="Select All" title="Select All" onclick="document.racunalo.notes.select()" class="n2" type="button">
+<input name="clear" value="Clear" title="Clear All" onclick="Memory(3)" class="n3" type="button">
+
+</div>   <!-- END  biljeska -->
+
+<div id="konstante">
+<div class="constnaslov"><b>PHYSICAL CONSTANTS</b></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('-273.16')">Absolute zero<br>-273.16 °C</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('9.80665')">Acceleration of free fall, standard<br>9.806&nbsp;65 m/s<sup>2</sup></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('1.660538782e-27')">Atomic mass unit<br>1.660&nbsp;538&nbsp;782×10<sup>-27</sup> kg</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('6.02214179e23')">Avogadro constant<br>6.022&nbsp;141&nbsp;79×10<sup>23</sup> 1/mol</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('2.718281828459')">Base of natural logarithms <br>2.718&nbsp;281&nbsp;828&nbsp;459...</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('1.3806504e-23')">Boltzmann constant<br>1.380&nbsp;6504×10<sup>-23</sup> J/K</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('2.8179402894e-15')">Classical electron radius<br>2.817&nbsp;940&nbsp;2894×10<sup>-15</sup> m</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('9.10938215e-31')">Electron mass<br>9.109&nbsp;382&nbsp;15×10<sup>-31</sup> kg</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('5.4461702177e-4')">Electron-proton mass ratio<br>5.446&nbsp;170&nbsp;2177×10<sup>-4</sup></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('1.602176487e-19')">Electronvolt<br>1.602&nbsp;176&nbsp;487×10<sup>-19</sup> J</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('1.602176487e-19')">Elementary charge<br>1.602&nbsp;176&nbsp;487×10<sup>-19</sup> C</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('96485.3399')">Faraday constant<br>96&nbsp;485.3399 C/mol</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('3.74177118e-16')">First radiation constant<br>3.741&nbsp;771&nbsp;18×10<sup>-16</sup> W m<sup>2</sup></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('8.314472')">Molar gas constant<br>8.314&nbsp;472 J/mol K</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('22.413996e-3')">Molar volume<br>(Ideal gas, <i>T</i> = 273.15 K, <i>p</i> = 101.325 kPa)<br>22.413&nbsp;996×10<sup>-3</sup> m<sup>3</sup>/mol</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('6.67428e-11')">Newtonian constant of gravitation<br>6.674&nbsp;28×10<sup>-11</sup> N m<sup>2</sup>/kg<sup>2</sup></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('12.566370614e-7')">Permeability of vacuum<br>12.566&nbsp;370&nbsp;614...×10<sup>-7</sup> N/A<sup>2</sup></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('8.854187817e-12')">Permittivity of vacuum<br>8.854&nbsp;187&nbsp;817...×10<sup>-12</sup> F/m</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('3.141592653589793238')">PI<br> 3.141&nbsp;592&nbsp;653&nbsp;589&nbsp;793&nbsp;238...</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('6.62606896e-34')">Planck constants<br>6.626&nbsp;068&nbsp;96×10<sup>-34</sup> J s</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('0.014387752')">Second radiation constant<br>0.014&nbsp;387&nbsp;752 m K</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('1366')">Solar constant<br>1366 W/m<sup>2</sup></div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('299792458')">Speed of light in vacuum<br>299&nbsp;792&nbsp;458 m/s</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('331.5')">Speed of sound in air at STP<br>331.5 + 0.6 * T/°C m/s</div>
+<div class="const" onmouseover="this.style.background='#eaeafa'" onmouseout="this.style.background='#fff'" onclick="DodajBroj('101325')">Standard pressure<br>101&nbsp;325 Pa</div>
+</div>   <!-- END  konstante -->
+
+<div class="crta"></div>
+
+</form>
+
+</div>
+<br>
+<p class="copyme">© 1998-2016 by <a href="http://www.periodni.com/scientific_calculator.html">Eni Generali&#263; (www.periodni.com)</a></p>
+<script src="calc4chem.js" type="text/javascript" defer="defer"></script>
+</body></html>

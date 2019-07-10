@@ -1,0 +1,1285 @@
+/* ------------------------------------------ */
+/*     ENIG. PERIODIC TABLE OF THE ELEMENTS   */
+/*         www.periodni.com - 8-2014          */
+/* ------------------------------------------ */
+
+/*    RESET     */
+/*==============*/
+/* Global reset of paddings and margins for all HTML elements */ 
+/* based on  Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) */
+html * {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* Basic Styles */
+/*==============*/
+
+body {
+	/*background-color: #fff;*/
+	color: #000;
+	/* 87.5% = 14px   93.75% = 15px "Roboto",*/
+	font: normal 87.5% "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Default paragraph styles */
+p,  li, table, th, td, dl, dd {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.4;
+	padding: 0.25em 0.5em;}
+p, dd {
+	text-align: justify;
+}
+
+/* Default Link Styles */
+a, a:visited {
+	color: #00c;
+	text-decoration: none;
+	background-color: transparent;
+	line-height: inherit;
+}
+a:hover, a:focus {
+	color: #c00;
+	outline: 0;
+}
+a img {border: none;}
+a img:hover, a img:focus {
+	opacity: 0.75;
+}
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+	color: #234567;
+	letter-spacing: 1px;
+	line-height: 1.25em;
+	font-weight: normal;
+	margin: 1.25em 0.5em 0.75em 0.5em;
+}
+/*h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight: inherit;}*/
+h1 {
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.25em;}
+h4 {font-size: 1.1em;}
+h5, b, strong {font-weight: bold;}
+h6, i, em {font-style: italic;}
+
+.h1-opis {
+	font-size: 1.2em;
+	margin-top: -0.75em;
+	margin-bottom: 1.5em;
+	color: #060;
+	text-align: center;
+}
+
+/* Define sub and superscript */
+sup, sub {
+	font-size: 75%;
+	line-height: 0;
+}
+sup {top: -0.7em;}
+sub {top: 0.35em;}
+	
+hr { 
+	height: 1px;
+	border: none;
+	color: #d4d4d4;
+	background-color: #d4d4d4;
+	margin: 0.5em;
+	clear:both;
+}
+
+pre, code, .kod {
+	font: normal 87.5% Consolas, "Lucida Console", "Courier New", Courier;
+	overflow: auto;
+}
+
+/* Default Table Styles */
+/*
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*/
+table {
+	width: 100%;
+	margin: 0.5em 0;
+	background-color: #fff;
+}
+caption {
+	font-style: italic;
+	padding: 10px 0;
+}
+
+td {border-bottom: 1px solid #ccc;}
+
+td a, th a {
+	display: block;
+}
+
+/* Shading even or odd rows  */
+/* even (2,4,6) odd (1,3,5) */
+tr:nth-child(odd),
+.even tr:nth-child(even) {
+	background-color: #eee;
+}
+th  {
+	font-size: 0.95em;
+	font-weight: bold;
+	background-color: #ddd;
+	border-bottom: 1px solid #aaa;
+	text-align: center;
+	vertical-align: middle;
+}
+/* Solid border after last row  */
+/*tr:last-child td {border-bottom: 1px solid #aaa;}*/
+
+.cacols th, .cacols td {
+	text-align: center;
+}
+.cols50 th {width: 50%}
+.cols33 th {width: 33.33%}
+
+/* centriranje teksta u 1., 2., 3 odnosno 4. koloni */
+.ccol1 td:nth-child(1), 
+.ccol2 td:nth-child(2), 
+.ccol3 td:nth-child(3),
+.ccol4 td:nth-child(4) {
+	text-align: center;
+}
+
+/* centriranje teksta u 1., 2. odnosno 3. koloni */
+.lcol1 td:nth-child(1), 
+.lcol2 td:nth-child(2), 
+.lcol3 td:nth-child(3) {
+	text-align: left;
+}
+
+/* centriranje teksta u 1., 2. odnosno 3. koloni */
+.rcol1 td:nth-child(1), 
+.rcol2 td:nth-child(2), 
+.rcol3 td:nth-child(3) {
+	text-align: right;
+}
+/* boldiranje teksta u 1., 2. odnosno 3. koloni */
+.bcol1 td:nth-child(1), 
+.bcol2 td:nth-child(2), 
+.bcol3 td:nth-child(3) {
+	font-weight: bold;
+}
+
+ul, ol {
+	list-style-position: outside;
+	margin-left: 2em;
+}
+
+/* Shading odd rows  */
+/* even (2,4,6) odd (1,3,5) */
+.odd li:nth-child(odd),
+.even li:nth-child(even) {
+	background-color: #eee;
+}
+
+dt {
+	/*font-weight: bold;*/
+}
+
+dd {
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+/* Margin/padding reset caused too small select boxes. */
+option {padding-left: 0.4em;}
+select {padding: 1px;}
+
+input[type="submit"] {padding: 0.15em;}
+input[type="text"] {line-height: 1.4;}
+
+
+
+/* ------------------------------ */
+/*      STRUCTURE AND MENU        */
+/* ------------------------------ */
+
+body {
+	background-color: #000000;
+}
+
+/* Nested div-s need for absolute positioning */
+#headlayer {
+	max-width: 960px;
+	margin: 5px auto;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #e6e6e6;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+  	border-radius: 1em;
+	-webkit-box-shadow: 5px 5px 5px #888;
+	-moz-box-shadow: 5px 5px 5px #888;
+	box-shadow: 5px 5px 5px #888;
+}
+#menulayer {
+	width: 100%;
+	background-color: #eef;
+	border-top: 1px solid #cacaba;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+}
+#bodylayer {
+	margin-top: 2.25em;
+	padding: 5px;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	-moz-box-shadow: inset 0 0 10px #ddd;
+	-webkit-box-shadow: inset 0 0 10px #ddd;
+	box-shadow: inset 0 0 10px #ddd;
+}
+
+/* ------------------------ */
+/*  Main frame - data body  */
+#ebody {
+	width: auto;
+	top: 0;
+	margin-right: 180px;
+	border: none;
+}
+
+/* Grid - based on Foundation http://foundation.zurb.com/docs/ */
+.xrow {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.xrow:before, .xrow:after {
+	content: " ";
+	display: block;
+}
+.xrow:after {clear: both;}
+	
+[class^="ycols"] {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+.ycols1 {width: 8.33333%;}
+.ycols2 {width: 16.66667%;}
+.ycols3 {width: 25%;}
+.ycols4 {width: 33.33333%;}
+.ycols5 {width: 41.66667%;}
+.ycols6 {width: 50%;}
+.ycols7 {width: 58.33333%;}
+.ycols8 {width: 66.66667%;}
+.ycols9 {width: 75%;}
+.ycols10 {width: 83.33333%;}
+.ycols11 {width: 91.66667%;}
+.ycols12 {width: 100%;}
+
+
+.txt-l {text-align: left !important; }
+.txt-r {text-align: right !important;}
+.txt-c {text-align: center !important;}
+.txt-j {text-align: justify !important;}
+
+.img-l {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	z-index: 100;
+}
+.img-r {
+	float: right;
+	margin: 10px 10px 10px 20px;
+	z-index: 100;
+}
+.img-c {
+	text-align: center;
+	margin: 20px;
+}
+.img-caption, .img-p {
+	font-style: italic;
+	padding: 10px 0;
+}
+
+.blok {display: inline-block;}
+.div-l, .left {float: left !important;}
+.div-r, .right {float: right !important;}
+.div-c, .center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.crven {color: #f00;}
+.hide {display: none;}
+.clear {clear: both;}
+.clear-left {clear: left;}
+
+.mobonly {display: none;}
+
+/* ------------------------------ */
+/*           PSE LOGO             */
+
+.logo  {
+	padding-left: 8px;
+	float: left;
+	width: 350px;
+}
+.logo img {
+	margin: 8px;
+	float: left;
+	z-index: 10;
+}
+.logo ul {
+    padding-top: 24px;
+	list-style-type: none;
+}
+.logo li {
+    padding: 1px 0 1px 0;
+	letter-spacing: 1px;
+	font-size: 0.9em;
+	font-style: italic;
+	color: #262;
+	background-color: #fff;
+}
+.logo a {
+	display: block;
+	color: #262;
+}
+/*.logo li:nth-child(4) {color: #373;}*/
+/*.logo li:nth-child(5) {color: #484;}*/
+
+.cglogo  img {
+	width:auto;
+	padding: 8px 15px;
+	float: left;
+}
+.h1-logo {
+	display: inline-block;
+	font: 2.25em "Georgia","Times New Roman",serif;
+	letter-spacing: 1px;
+	color: #ddd;
+	padding-top: 30px;
+	margin: 0;
+	text-align: left;
+	text-shadow: 2px 2px 2px #888;
+}
+	
+.social {padding: 5px;}
+.social img {
+	margin: 5px;
+	padding: 3px;
+}
+/*.social img:hover {opacity: 0.8;}*/
+
+
+.gotop {
+	border-top: 1px solid #d4d4d4;
+	border-bottom: 1px solid #d4d4d4;
+	/*padding: 0.5em;*/
+}
+/*
+.gotop .ycols6:first-child {
+	margin: 0.5em 0;
+}
+*/
+.gotop [class^="ycols"] {
+	padding: 0.5em;
+}
+
+.gotop img {
+	margin: 0.5em;
+	float: left;
+}
+
+.gotop p {float: right;}
+.gotop ul {margin-left: 0;}
+.gotop li {
+	float: left;
+	list-style: none;
+}
+
+.citat {
+	font-size: 0.95em;
+	color: #226622;
+	text-align: left;
+	/* Avoid text overflow */
+    word-wrap: break-word;
+	word-break: break-all;
+}
+.copyme {
+	text-align: center;
+	color: #99b;
+	font-size: 0.85em;
+	margin-top: 15px;
+ }
+.copyme a:link {color: #a8a9b9}
+.copyme a:hover {color: #f00}
+
+
+/* --------------------- */
+/*      MAIN  MENU       */
+/* --------------------- */
+.topmenu {
+	position: absolute;
+	top: 0;
+	font-size: 0.90em;
+}
+#leftnav, #rightnav {
+	margin: 0;
+	padding: 0;
+	float: left;
+	z-index: 30;
+}
+
+#rightnav {
+	position: absolute;
+	right: 0;
+}
+
+#menu {display: none;}
+
+#leftnav li , #rightnav li {
+	float: left;
+	list-style: none;
+}
+
+/* main level link */
+#leftnav a, #rightnav a {
+	color: #567;
+	text-decoration: none;
+	display: block;
+	padding: 0.25em 0.35em;
+	border: 1px solid transparent;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* main level link hover */
+#leftnav li:hover > a, #rightnav li:hover > a {
+	background-color: #eef;
+	color: #444;
+	border-top: 1px solid #f8f8f8;
+	-moz-box-shadow: 3px 1px 3px #888;
+	-webkit-box-shadow: 3px 1px 3px #888;
+	box-shadow: 3px 1px 3px #888;
+}
+
+#leftnav ul a:hover, #rightnav ul a:hover {
+	background-color: #0078ff !important;
+	color: #fff !important;
+	border-top: 1px solid #0078ff;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+/* dropdown */
+#leftnav li:hover > ul, #rightnav li:hover > ul  {
+	display: block;
+	margin-top: 2px;
+	left: 7px;
+}
+#leftnav ul li:hover > ul {
+	display: block;
+	margin: 0px;
+	top: 0px;
+	left: 175px;
+}
+#rightnav li:hover > ul {
+	left: auto;
+	right: 7px;
+	width: 175px;
+}
+	
+/* level 2 list box */
+#leftnav ul, #rightnav ul {
+	display: none;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #eef;
+	border: 1px solid #b4b4b4;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 5px 5px 5px #888;
+	-webkit-box-shadow: 5px 5px 5px #888;
+	box-shadow: 5px 5px 5px #888;
+	z-index: 20;
+}
+#leftnav ul li, #rightnav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #ddd;
+}
+#leftnav ul li.separator, #rightnav ul li.separator {
+	padding-bottom: 4px;
+	border-bottom: 1px solid #888;
+}
+
+/* rounded corners of first and last link */
+#leftnav ul li:first-child > a, 
+#rightnav ul li:first-child > a {
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#leftnav ul li:last-child > a, 
+#rightnav ul li:last-child > a {
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+/* images in language list */
+#lang img {padding-bottom: 3px;}
+
+#lang ul > li  {
+	padding-left: 25px;
+	margin: 0 4px;
+	width: 98%;
+}
+#edata ul > li {
+	width: 100%;
+}
+
+#lang li:nth-child(1) {background: url("http://www.periodni.com/slike/s_de.jpg") no-repeat left center;}
+#lang li:nth-child(2) {background: url("http://www.periodni.com/slike/s_en.jpg") no-repeat left center;}
+#lang li:nth-child(3) {background: url("http://www.periodni.com/slike/s_fr.jpg") no-repeat left center;}
+#lang li:nth-child(4) {background: url("http://www.periodni.com/slike/s_hr.jpg") no-repeat left center;}
+#lang li:nth-child(5) {background: url("http://www.periodni.com/slike/s_it.jpg") no-repeat left center;}
+#lang li:nth-child(6) {background: url("http://www.periodni.com/slike/s_es.jpg") no-repeat left center;}
+
+/* remove rounded corners of first and last language link */
+#lang ul li:first-child > a {
+	-webkit-border-top-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+}
+#lang ul li:last-child > a {
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+	
+/* clearfix */
+#leftnav:after, #rightnav:after, #row:after , .h1-opis:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+
+/* ---------------------- */
+/*      Bottom menu       */
+
+.bottomenu {
+	width: 50%;
+	float: left;
+	font-size: 0.85em;
+	padding: 1em;
+}
+.bottomenu p {
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.bottomenu ul + p {
+	padding-top: 2em;
+}
+.bottomenu ul {margin-left: 1em;}
+.bottomenu li  {
+	padding: 0.4em 0;
+	color: #444;
+	background-color: #eef;
+}
+.bottomenu li a {padding: 0;}
+ 
+/* ------------------------ */
+/* List navigation links  */
+
+.lilink {margin: 1px;}
+.lilink .aktiv {background-color: #dde;}
+.lilink ul {list-style-type: none;}
+.lilink li  {
+	display: inline-block;
+	/*width: 100%;*/
+	padding: 0;
+	margin: 0 1px;
+	color: #444;
+	background-color: #eef;
+	-webkit-box-shadow: 3px 1px 3px #888;
+	-moz-box-shadow: 3px 1px 3px #888;
+	box-shadow: 3px 1px 3px #888;
+	text-align: center;
+	float: left;
+}
+
+.lilink a, .lilink a:visited {
+	display: block;
+	color: #234;
+	width: 100%;
+	padding: 0.25em;
+	text-decoration: none;
+}
+.lilink li:active > a, .lilink li:hover > a {
+	background-color: #08f;
+	color: #fff;
+	border-style: none;
+}
+
+
+/* ------------------ */
+/*       Google       */
+
+#gsearch {
+	position: absolute;
+	float: right;
+	top: 35px;
+	right: 20px;
+}
+
+.googleup {
+	position: absolute;
+	width: 160px;
+	height: 600px;
+	top: 10px;
+	right:-172px;
+}
+.googledown {
+	width: 728px;
+	height: 90px;
+	margin: 24px auto;
+}
+
+
+/* ------------------ */
+/*   EU Cookie Law    */
+#cookie-law { 
+    max-width:960px;
+    background:#eeeadd; 
+    margin:5px auto 0; 
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+#cookie-law .tekst { 
+	margin-right:120px;
+    padding:8px; 
+    text-align:center; 
+    color:#682008;
+}
+#cookie-law .botun { 
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}
+.close-cookie-banner { 
+    width:110px;
+	text-align:center; 
+    background:#fff;
+	padding:8px;
+    border: 1px solid #0cc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+/* -------------------------------- */
+/* Special for Math and Chemistry */
+.eq-l, .eq-c, .eq-tab {
+	line-height: 1.4;
+	padding: 0.25em 0.5em;
+	font-size: 1.1em;
+}
+.eq-l {text-align: left;}
+.eq-c {text-align: center;}
+
+.eq-c  i {
+	letter-spacing: 1px;
+}
+.eq-tab {
+	padding-left: 50px;
+	text-align: left;
+}
+.dblarrow {
+	font-size: 125%;
+	top: -0.4ex;
+	margin: 0 2px;
+}
+.dblarrow:after {
+	content:"\2190"; /* &larrow; */
+	position: absolute;
+	left: 0;
+	top: 0.5ex;
+}
+
+
+/* Calc4Chem - Scientific calculator for chemists  written by Eni Generalic - http://www.periodni.com/     */
+/* If you use a variant of this in your page, then please email me (enig@periodni.com)  */
+
+/* -------------- */
+/*    Calc4Chem   */
+/* -------------- */
+
+#calc4chem {
+position: relative;
+top: 15px;
+width: 576px;
+height: 433px;
+margin: auto;
+border: 3px outset;
+background: #e4e4e4;
+text-align: center;
+color: #eee;
+border-radius: 10px;
+}
+
+#kalkulator {
+ position: relative;
+ text-align: center;
+ background: #e4e4e4;
+ color: #fff;
+ margin: 8px;
+}
+
+#biljeska {
+ position: absolute;
+ top: 4px;
+ left: 296px;
+ width: 256px;
+ height: 365px;
+ background: #e4e4e4;
+ color: #fff;
+}
+
+#konstante  {
+ position: absolute;
+ top: 11px;
+ left: 301px;
+ width: 264px;
+ height: 368px;
+ border: 1px ridge #999;
+ background: #fff;
+ color: #fff;
+ display: none;
+ text-align: center;
+ overflow: auto;
+}
+
+#numformat {
+ position: absolute;
+ top: 132px;
+ width: 270px;
+ height: 278px;
+ border: 1px ridge #999;
+ border-radius: 6px;
+ display: none;
+ background: #c0d9d9; 
+ text-align: center;
+ color: #000;
+}
+
+.displej {
+ position: relative;
+ top: 0;
+ left: 0;
+ width: 265px;
+ height: 130px;
+ border: 3px ridge #eee;
+ background: #eee;
+ border-radius: 6px;
+}
+
+.tipkovnica {
+ position: relative;
+ width: 275px;
+ height: 228px;
+ background: #e4e4e4;
+}
+
+.zadatak {
+ position: relative;
+ width: 265px;
+ height: 30px;
+ border: 3px ridge #eee;
+ background: #fff;
+ padding-top: 1px;
+ border-radius: 6px;
+}
+.zadatak input[type="text"] {
+width: 100%;
+color: #060;
+padding: 2px 5px 3px 5px;
+font-size: 0.95em;
+border: none;
+}
+
+.tekstarea {
+ position: absolute;
+ top: 5px;
+ left: 4px;
+ width: 258px;
+ height: 367px;
+ padding: 0 0 0 5px;
+ border: 3px groove #ccc;
+ background: #fff;
+ font: normal 9pt/150% monospace;
+ color: #345678;
+ overflow: auto;
+}
+
+.constnaslov {
+width: 230px;
+color: #00f;
+text-align: center;
+font: normal 12px/125% sans-serif;
+padding: 8px;
+border-bottom: 1px solid #cacaba; 
+}
+.const {
+width: 235px;
+text-align: center;
+font: 11px/125% sans-serif;
+color: #900;
+padding: 5px;
+border-bottom: 1px solid #cacaba;
+display: block;
+cursor: pointer;
+}
+.const a:link {
+	display: block;
+	color: #900;
+	text-decoration: none;
+}
+.const a:visited {
+	display: block;
+	color: #036;
+	text-decoration: none;
+}
+.const a:active {
+	display: block;
+	color: #900;
+	text-decoration: none;
+}
+.const a:hover {
+	display: block;
+	background: #eaeafa;
+	color: #900;
+	text-decoration: none;
+}
+
+.crta {
+ position: absolute;
+ top: 0;
+ left: 288px;
+ width: 1px;
+ height: 415px;
+ border: 1px inset;
+ background: #fff;
+ color: #fff;
+}
+
+#numauto, #numsci, #numfix, #nummem, #numrad, #numdeg, #numgrad, #numspace {
+ position: relative;
+ float: left;
+ width: 27px;
+ height: 10px;
+ margin: 4px 0 1px 3px;
+ font: normal 9px sans-serif;
+ text-align: center;
+ color: #ccc;
+ background: #eee;
+ display: inline;
+ cursor: pointer;
+ border: none;
+}
+#numauto {color: #000;}
+#numrad {color: #000;}
+#nummem {
+ width: 44px;
+ margin-left: 12px;
+ margin-right: 12px;
+}
+
+.displej a, .displej a:visited , .displej a:active {
+ color: inherit;
+	display: block;
+	text-decoration: none;
+	cursor:pointer;
+ }
+
+.displej a:hover {
+	color: #f00;
+	text-decoration: none;
+	cursor:pointer;
+ }
+
+.upit, .rezultat, .oldtask, .oldresult {
+ position: relative;
+ width: 256px;
+ background: #eee;
+ letter-spacing: 1px;
+ padding: 2px 4px;
+ margin: 0;
+ border: 0;
+ 
+}
+
+.upit, .oldtask {
+ text-align: left;
+ font: normal 9pt sans-serif;
+ color: #0a0;
+ padding-top: 6px;
+ background: #f1f1f1;
+  cursor: pointer;
+}
+
+.rezultat, .oldresult {
+ text-align: right;
+ font: normal 11pt sans-serif;
+ color: #00a;
+  cursor: pointer;
+}
+
+.formatbr {
+ position: absolute;
+ top: 55px;
+ left: 12px;
+ width: 245px;
+ height: 110px;
+ border: 1px ridge #777;
+ border-radius: 10px;
+ background: #e8e8e8;
+}
+
+.formatnaslov {
+ position: relative;
+ margin-top: 15px;
+ font: normal 14pt cursive;
+ text-align: center;
+}
+
+#automatik, #scienc, #fiksed   {
+ position: absolute;
+ left: 6px;
+ font: normal 10pt sans-serif;
+ color: #000;
+}
+#automatik {top: 10px;}
+#scienc {top: 44px;}
+#fiksed {top: 78px;}
+
+.decnaslov {
+ position: absolute;
+ top: 10px;
+ left: 145px;
+ width: 110px;
+ text-align: center;
+ font: normal 10pt sans-serif;
+ color: #000;
+}
+.decimal {
+ position: absolute;
+ top: 32px;
+ left: 167px;
+ width: 60px;
+ height: 22px;
+}
+#separator {
+ position: absolute;
+ top: 78px;
+ left: 85px;
+ width: 150px;
+ text-align: right;
+ font: normal 10pt sans-serif;
+}
+ 
+.degrad {
+ position: absolute;
+ top: 180px;
+ left: 12px;
+ width: 245px;
+ height: 25px;
+ padding-top: 3px;
+ border: 1px ridge #777;
+ border-radius: 10px;
+ background: #e8e8e8;
+}
+
+#rad, #deg, #grad {
+ position: relative;
+ margin: 0 7px;
+ font: normal 10pt sans-serif;
+}
+
+.cls {
+ position: absolute;
+ top: 220px;
+ left: 35px;
+ width: 90px;
+ height: 28px;
+ font: normal 9pt sans-serif;
+ color: #c00;
+}
+
+.nfclose  {
+ position: absolute;
+ top: 220px;
+ left: 140px; 
+ height: 28px;
+ width: 90px;
+ font: normal 9pt sans-serif;
+ color: #000;
+}
+.n2copy   {
+ position: absolute;
+ left: 0;
+ top: 260px;
+ width: 100%;
+ color: #aaa;
+ font: normal 9pt sans-serif;
+}
+
+.n1, .n2, .n3  {
+ position: absolute;
+ top: 379px;
+ height: 28px;
+ width: 84px;
+ font: normal 9pt sans-serif;
+ color: #000;
+ }
+.n1   {
+ left: 4px; 
+}
+.n2   {
+ left: 91px; 
+}
+.n3   {
+ left: 178px; 
+}
+
+.resetrow {clear: both;}
+.spacerow {
+ clear: both;
+ height: 8px;
+}
+
+.funbtn {
+ position: relative;
+ float: left;
+ height: 25px;
+ width: 45px;
+ padding: 0;
+ color: #234;
+ font: normal 8pt verdana;
+ }
+
+.numbtn, .modebtn, .plusbtn, .membtn, .expbtn, .enterbtn {
+ position: relative;
+ float: left;
+ height: 40px;
+ width: 45px;
+ padding: 0;
+ font: normal 10pt sans-serif;
+ color: #000;
+}
+
+.modebtn, .enterbtn   {
+ width: 90px;
+ }
+ 
+.membtn {
+ color: #a00;
+ }
+ 
+.plusbtn {
+ font: normal 14pt sans-serif;
+ color: #00f;
+ }
+ 
+.numbtn {
+ font: normal 12pt verdana;
+ color: #262;
+ }
+ 
+
+/* ------------------------ */
+/*          MEDIA           */
+/* ------------------------ */
+
+/* --- TABLET --- */
+@media only screen and (max-width: 767px) {
+
+	/*.ycols1,
+	.ycols2,
+	.ycols3,
+	.ycols4,
+	.ycols5,
+	.ycols6,
+	.ycols7,
+	.ycols8,
+	.ycols9,
+	.ycols10,
+	.ycols11,
+	.ycols12 {width: 100%;}*/
+	[class^="ycols"] {
+		width: 100%;
+	}
+
+	.fix1 {width: 8.33333% !important;}
+	.fix2 {width: 16.66667% !important;}
+	.fix3 {width: 25% !important;}
+	.fix4 {width: 33.33333% !important;}
+	.fix5 {width: 41.66667% !important;}
+	.fix6 {width: 50% !important;}
+	.fix7 {width: 58.33333% !important;}
+	.fix8 {width: 66.66667% !important;}
+	.fix9 {width: 75% !important;}
+	.fix10 {width: 83.33333% !important;}
+	.fix11 {width: 91.66667% !important;}
+	.fix12 {width: 100% !important;}
+
+	body {
+		/* 87.5% = 14px   93.75% = 15px   100% = 16px */
+		font-size: 100%;
+	}
+
+	.mobhide {display: none;}
+	.mobonly {
+		display: block;
+		font-size: 1rem;
+	}
+	
+	#ebody {margin: auto;}
+	#rightnav {font-size: 1rem;}
+	
+	.bottnav li  {width: 32.5%;}
+	.bottomenu div + div {padding-top: 2em;}
+	
+	#gsearch {
+		position: relative;
+		display: table;
+		float: none;
+		top: auto;
+		right: auto;
+		margin: 10px auto;
+	}
+
+	.googleup, .googledown {
+		position: relative;
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+		text-align: center;
+		margin: 15px 0;
+	}
+	.cglogo  {text-align: center;}
+	.cglogo  img {float: none;}	
+	.h1-logo {
+		display: block;
+		font-size: 1.75em;
+		padding: 0 0 10px 0;
+		text-align: center;
+	}	
+	h1 {font-size: 1.5em;}
+	h2 {font-size: 1.2em;}
+	h3 {font-size: 1em;}
+
+}
+
+
+/* --- MOBITEL STYLES --- */
+@media only screen and (max-width: 485px) {
+
+	/*
+	.tabhide {display: none;}
+	.tabshow {display: block;}
+	.mobhide {display: none;}
+	.mobonly {display: block;}
+	*/	
+	.img-l, .img-r {
+		text-align: center !important;
+		float: none !important;
+	}
+	#rightnav {
+		position: relative;
+		float: right;
+	}
+	#rightnav a {padding: 0.25em 0.25em;}
+
+}
+
+
+/* --- PRINT STYLES --- */
+@media print {
+	.noprint {display: none !important;}
+	.print-only {display: block !important;}
+
+	#gsearch, .googleup, .googledown, .bottomenu, .mobonly {
+		display: none;
+	}
+	#ebody {margin: auto;}
+	
+	pre, blockquote {
+		border: 1px solid #999999;
+		page-break-inside: avoid;
+	}
+
+	thead {display: table-header-group;}
+
+	tr, img {
+		page-break-inside: avoid;
+	}
+	
+	img {max-width: 100% !important;}
+	
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2, h3 {
+		page-break-after: avoid;
+	}
+}
+
