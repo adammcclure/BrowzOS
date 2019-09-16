@@ -3,7 +3,7 @@
 <title>BrowzOS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="description" content="BrowzOS consists of sevearl JavaScrip components, all behaving like an actual operating system.">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="desktop/js/jquery.js"></script>
 <script type="text/javascript" src="desktop/js/interface.js"></script>
 <script type="text/javascript" src="desktop/js/drag.js"></script>
 <script type="text/javascript" src="desktop/js/desktop.js"></script>
@@ -23,13 +23,8 @@ window.resizeTo(screen.availWidth,screen.availHeight);
 <link href="desktop/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-
-
 <div id="desktop">
-
 <!--- sorry - windowing system is not compatible with desktop -->
-
 <!---
 <div id="desktop-icons">
 <div id="i2" style="position:absolute; top:30px; left:200px; width:32px; height:32px;">
@@ -81,9 +76,7 @@ new dragElement('i7');
 </script>
 </div>
 -->
-
 </div>
-
 <!--bottom dock -->
 <div class="dock" id="dock2">
 <div class="dock-container2">
@@ -120,111 +113,110 @@ valign: 'bottom',
 halign : 'center'
 })});</script>
 
-
-
-<style>
+<style type="text/css">
 #desktop {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-	overflow: hidden;
+position: absolute;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+overflow: hidden;
 }
 
 .window .bar{
-  background-image: url(../img/window-bar.png);
-  cursor:pointer;
-  position:relative;
-  font-family: courier, mono-space;
-  font-size:10px;
-  font-weight:bold;
-  height:16px;
-  background-color:white;
-  margin-bottom:10px;
+position: relative;
+font-size: 16px;
+font-weight: bold;
+height: 24px;
+color: #CDCDCD;
+background-color: #000000;
+cursor: default;
 }
 
 .window .bar p{
-  text-align:center;
-  margin:0px;
-  padding-top: 2px;
+text-align: center;
+margin: 0px;
+padding-top: 2px;
 }
 
 .window .bar p .name{
-  margin-top:0px;
+margin-top:0px;
 }
 
 .window .bar div.close{
-  position:absolute;
-  width:9px;
-  height:9px;
-  border:1px solid black;
-  background-color:white;
-  right: 2px;
-  top:1px;
-}
-
-.window .resize{
-  position:absolute;
-  width:14px; height:14px;
-  border:1px solid black;
-  background-color:white;
-  cursor:se-resize;
-  right:-1px;bottom:-1px;
+position:absolute;
+width: 23px;
+height: 23px;
+border: 0px;
+background-color: #CDCDCD;
+right: 3px;
+top: 3px;
 }
 
 .window .bar div.close:hover{
+background-color: #FF0000;
+}
 
+.window .resize{
+position: absolute;
+width: 24px;
+height:24px;
+border: 0px;
+background-color: #CDCDCD;
+cursor: nwse-resize;
+right: 3px;
+bottom: 3px;
 }
 
 .window .view{
-  position:absolute;
-  top:16px;
-  left:0px;right:0px;
-  bottom:0px;
-  overflow:auto;
-  padding-top:10px;
-  background-color: white;
+position:absolute;
+top: 24px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+overflow: auto;
+padding-top: 10px;
+background-color: #FFFFFF;
+border-left: 1px solid black;
+border-right: 3px solid black;
+border-top: 3px solid black;
+border-bottom: 30px solid black;
 }
-
-
 
 .view::-webkit-scrollbar, iframe::-webkit-scrollbar
 {
-  width: 15px;
-  border-left:1px solid black;
-  border-top:1px solid black;
-  background-image:url(../img/dither.png);
+width: 14px;
+height: 14px;
+border: 1px solid black;
 }
 
 .view::-webkit-scrollbar-thumb, iframe ::-webkit-scrollbar-thumb
 {
-  width:14px;
-  height:14px;
-  border:1px solid black;
-  background:white;
+width: 14px;
+height: 14px;
+border: 1px solid black;
 }
 
 .window.image .view img{
-  display: block;
-  margin: 0em auto;
+display: block;
+margin: 0em auto;
 }
 
 .window.html .view{
-  padding-top:0em;
-  overflow: hidden;
+padding-top: 0em;
+overflow: hidden;
 }
 
 .window.image .view{
-  padding-top:0em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+padding-top: 0em;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .window.html iframe{
-  width:100%;
-  height:100%;
+width: 100%;
+height: 100%;
 }
 </style>
-</td></tr></table></body></html>
+<!--</td></tr></table>--></body></html>
