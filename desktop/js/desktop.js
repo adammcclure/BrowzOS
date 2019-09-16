@@ -1,5 +1,5 @@
-/* Author:
-selfsame
+/*
+Code originally created by Joseph Parker (a.k.a.: Selfsame) for use with his https://tilde.towm homepage, called tildeos and inspired by MacOS System 6.
 */
 debug = true
 window.files = {};
@@ -203,5 +203,3 @@ function window_open(path, blank, opts){
     });
 	return true;
 }
-
-
