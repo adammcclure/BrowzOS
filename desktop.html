@@ -6,7 +6,6 @@
 <script type="text/javascript" src="desktop/js/jquery.js"></script>
 <script type="text/javascript" src="desktop/js/interface.js"></script>
 <script type="text/javascript" src="desktop/js/drag.js"></script>
-<script type="text/javascript" src="desktop/js/desktop.js"></script>
 <script type="text/javascript">
 function disp_alert()
 {alert("BrowzOS © 2008-2011 by TechEmporium. All rights reserved." + '\n' + '\n' + '\t' + "This software is in the public domain." + '\n');}
@@ -23,10 +22,41 @@ window.resizeTo(screen.availWidth,screen.availHeight);
 <link href="desktop/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="desktop">
-<!--- sorry - windowing system is not compatible with desktop -->
-<!---
-<div id="desktop-icons">
+<!--bottom dock -->
+<div class="dock" id="dock2">
+<div class="dock-container2">
+<a class="dock-item2" href="#" onclick="window.open('rte/','_blank','width=screen.width,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=20,left=0,resizable=0'); return false;"><span>Word Processor</span><img src="desktop/dock/wproc.gif" alt="rte"></a>
+<a class="dock-item2" href="#" onclick="window.open('sprdsht/index_offline.html','_blank','width=screen.width,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=30,left=0,resizable=0'); return false;"><span>Spreadsheet</span><img src="desktop/dock/sprdsht.gif" alt="sprdsht"></a>
+<a class="dock-item2" href="#" onclick="window.open('calc/','_blank','width=550,height=410,scrollbars=0,status=0,menubar=0,toolbar=0,top=100,left=100,resizable=0'); return false;"><span>Scientific Calculator</span><img src="desktop/dock/calc.gif" alt="calc"></a>
+<a class="dock-item2" href="#" onclick="window.open('web/','_blank','width=screen.width,height=350,scrollbars=1,status=1,menubar=1,toolbar=1,location=1,top=10,left=0,resizable=1'); return false;"><span>Web Browser</span><img src="desktop/dock/inet.gif" alt="inet"></a>
+<a class="dock-item2" href="#" onclick="window.open('instmess/index_offline.html','_blank','width=550,height=200,scrollbars=0,status=0,menubar=0,toolbar=0,top=60,left=60,resizable=0'); return false;"><span>Instant Messenger</span><img src="desktop/dock/chat.gif" alt="chat"></a>
+<a class="dock-item2" href="#" onclick="window.open('games/','_blank','width=675,height=410,scrollbars=0,status=0,menubar=0,toolbar=1,top=50,left=100,resizable=0'); return false;"><span>Games</span><img src="desktop/dock/games.gif" alt="games"></a>
+<a class="dock-item2" href="#" onclick="window.open('media/','_blank','width=450,height=410,scrollbars=0,status=0,menubar=0,toolbar=0,top=100,left=200,resizable=0'); return false;"><span>Media Player</span><img src="desktop/dock/media.gif" alt="media"></a>
+<a class="dock-item2" href="#" onclick="window.open('bzcmd/','_blank','width=800,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=50,left=50,resizable=0'); return false;"><span>Command Line</span><img src="desktop/dock/term.gif" alt="term"></a>
+<a class="dock-item2" href="#" onclick="window.open('sample_app/','_blank','width=800,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=50,left=50,resizable=0'); return false;"><span>Sample &quot;Application&quot;</span><img src="desktop/dock/sample.gif" alt="sample"></a>
+<a class="dock-item2" href="#" onclick="window.open('help_offline/','_blank','width=800,height=450,scrollbars=1,status=0,menubar=0,toolbar=1,top=0,left=100,resizable=0'); return false;"><span>Help</span><img src="desktop/dock/help.gif" alt="help"></a>
+<a class="dock-item2" href="#" onclick="window.open('forum/','_blank','width=600,height=300,scrollbars=1,status=0,menubar=0,toolbar=0,top=70,left=50,resizable=0'); return false;"><span>Forum</span><img src="desktop/dock/forum.gif" alt="forum"></a>
+<a class="dock-item2" href="#" onclick="window.open('clock/','_blank','width=245,height=475,scrollbars=0,status=0,menubar=0,toolbar=0,top=30,left=30,resizable=0'); return false;"><script type="text/javascript" src="desktop/js/clock.js"></script><span id="clockbox"></span><img src="desktop/dock/time.gif" alt="time"></a>
+<a class="dock-item2" href="#" onclick="disp_alert()"><span>About BrowzOS</span><img src="desktop/dock/info.gif" alt="info"></a>
+</div>
+</div>
+<!--dock menu JS options -->
+<script type="text/javascript">
+$(document).ready(
+function()
+{
+$('#dock2').Fisheye(
+{
+maxWidth: 75,
+items: 'a',
+itemsText: 'span',
+container: '.dock-container2',
+itemWidth: 50,
+proximity: 80,
+alignment : 'left',
+valign: 'bottom',
+halign : 'center'
+})});</script>
 <div id="i2" style="position:absolute; top:30px; left:200px; width:32px; height:32px;">
 <dl>
 <dt><img src="desktop/drag/wproc.gif" width="48" height="48" align="left" alt="wproc"></dt>
@@ -74,149 +104,4 @@ new dragElement('i5');
 new dragElement('i6');
 new dragElement('i7');
 </script>
-</div>
--->
-</div>
-<!--bottom dock -->
-<div class="dock" id="dock2">
-<div class="dock-container2">
-<a class="dock-item2" href="#" onclick="window_open('rte/','_blank','width=screen.width,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=20,left=0,resizable=0'); return false;"><span>Word Processor</span><img src="desktop/dock/wproc.gif" alt="rte"></a>
-<a class="dock-item2" href="#" onclick="window_open('sprdsht/index_offline.html','_blank','width=screen.width,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=30,left=0,resizable=0'); return false;"><span>Spreadsheet</span><img src="desktop/dock/sprdsht.gif" alt="sprdsht"></a>
-<a class="dock-item2" href="#" onclick="window_open('calc/','_blank','width=550,height=410,scrollbars=0,status=0,menubar=0,toolbar=0,top=100,left=100,resizable=0'); return false;"><span>Scientific Calculator</span><img src="desktop/dock/calc.gif" alt="calc"></a>
-<a class="dock-item2" href="#" onclick="window_open('web/','_blank','width=screen.width,height=350,scrollbars=1,status=1,menubar=1,toolbar=1,location=1,top=10,left=0,resizable=1'); return false;"><span>Web Browser</span><img src="desktop/dock/inet.gif" alt="inet"></a>
-<a class="dock-item2" href="#" onclick="window_open('instmess/index_offline.html','_blank','width=550,height=200,scrollbars=0,status=0,menubar=0,toolbar=0,top=60,left=60,resizable=0'); return false;"><span>Instant Messenger</span><img src="desktop/dock/chat.gif" alt="chat"></a>
-<a class="dock-item2" href="#" onclick="window_open('games/','_blank','width=675,height=410,scrollbars=0,status=0,menubar=0,toolbar=1,top=50,left=100,resizable=0'); return false;"><span>Games</span><img src="desktop/dock/games.gif" alt="games"></a>
-<a class="dock-item2" href="#" onclick="window_open('media/','_blank','width=450,height=410,scrollbars=0,status=0,menubar=0,toolbar=0,top=100,left=200,resizable=0'); return false;"><span>Media Player</span><img src="desktop/dock/media.gif" alt="media"></a>
-<a class="dock-item2" href="#" onclick="window_open('bzcmd/','_blank','width=800,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=50,left=50,resizable=0'); return false;"><span>Command Line</span><img src="desktop/dock/term.gif" alt="term"></a>
-<a class="dock-item2" href="#" onclick="window_open('sample_app/','_blank','width=800,height=450,scrollbars=0,status=0,menubar=0,toolbar=0,top=50,left=50,resizable=0'); return false;"><span>Sample &quot;Application&quot;</span><img src="desktop/dock/sample.gif" alt="sample"></a>
-<a class="dock-item2" href="#" onclick="window_open('help_offline/','_blank','width=800,height=450,scrollbars=1,status=0,menubar=0,toolbar=1,top=0,left=100,resizable=0'); return false;"><span>Help</span><img src="desktop/dock/help.gif" alt="help"></a>
-<a class="dock-item2" href="#" onclick="window_open('forum/','_blank','width=600,height=300,scrollbars=1,status=0,menubar=0,toolbar=0,top=70,left=50,resizable=0'); return false;"><span>Forum</span><img src="desktop/dock/forum.gif" alt="forum"></a>
-<a class="dock-item2" href="#" onclick="window_open('clock/','_blank','width=245,height=475,scrollbars=0,status=0,menubar=0,toolbar=0,top=30,left=30,resizable=0'); return false;"><script type="text/javascript" src="desktop/js/clock.js"></script><span id="clockbox"></span><img src="desktop/dock/time.gif" alt="time"></a>
-<a class="dock-item2" href="#" onclick="disp_alert()"><span>About BrowzOS</span><img src="desktop/dock/info.gif" alt="info"></a>
-</div>
-</div>
-<!--dock menu JS options -->
-<script type="text/javascript">
-$(document).ready(
-function()
-{
-$('#dock2').Fisheye(
-{
-maxWidth: 75,
-items: 'a',
-itemsText: 'span',
-container: '.dock-container2',
-itemWidth: 50,
-proximity: 80,
-alignment : 'left',
-valign: 'bottom',
-halign : 'center'
-})});</script>
-
-<style type="text/css">
-#desktop {
-position: absolute;
-top: 0px;
-bottom: 0px;
-left: 0px;
-right: 0px;
-overflow: hidden;
-}
-
-.window .bar{
-position: relative;
-font-size: 16px;
-font-weight: bold;
-height: 24px;
-color: #CDCDCD;
-background-color: #333333;
-cursor: default;
-}
-
-.window .bar p{
-text-align: center;
-margin: 0px;
-padding-top: 2px;
-}
-
-.window .bar p .name{
-margin-top:0px;
-}
-
-.window .bar div.close{
-position:absolute;
-width: 23px;
-height: 23px;
-border: 0px;
-background-color: #CDCDCD;
-right: 3px;
-top: 3px;
-}
-
-.window .bar div.close:hover{
-background-color: #FF0000;
-}
-
-.window .resize{
-position: absolute;
-width: 24px;
-height:24px;
-border: 0px;
-background-color: #CDCDCD;
-cursor: nwse-resize;
-right: 3px;
-bottom: 3px;
-}
-
-.window .view{
-position:absolute;
-top: 24px;
-left: 0px;
-right: 0px;
-bottom: 0px;
-overflow: auto;
-padding-top: 10px;
-background-color: #FFFFFF;
-border-left: 1px solid #333333;
-border-right: 3px solid #333333;
-border-top: 3px solid #333333;
-border-bottom: 30px solid #333333;
-}
-
-.view::-webkit-scrollbar, iframe::-webkit-scrollbar
-{
-width: 14px;
-height: 14px;
-border: 1px solid #000000;
-}
-
-.view::-webkit-scrollbar-thumb, iframe ::-webkit-scrollbar-thumb
-{
-width: 14px;
-height: 14px;
-border: 1px solid #000000;
-}
-
-.window.image .view img{
-display: block;
-margin: 0em auto;
-}
-
-.window.html .view{
-padding-top: 0em;
-overflow: hidden;
-}
-
-.window.image .view{
-padding-top: 0em;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.window.html iframe{
-width: 100%;
-height: 100%;
-}
-</style>
-<!--</td></tr></table>--></body></html>
+</td></tr></table></body></html>
